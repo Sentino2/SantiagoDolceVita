@@ -1,3 +1,18 @@
-
+h1 {
+  color: red;
+  font-size: 4rem;
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    color: yellow;
+    font-size: 6rem;
+  }
+}
+@media screen and (min-width: 1240px) {
+  h1 {
+    color: blue;
+    font-size: 8rem;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
