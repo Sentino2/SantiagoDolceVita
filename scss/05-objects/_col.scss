@@ -1,0 +1,58 @@
+@use '../01-settings/' as *;
+@use '../02-tools/' as *;
+
+.col {
+
+    width: 100%;
+    padding: 0 $gutter $gutter $gutter;
+
+    &--md50 {
+
+        @include medium {
+            flex: 0 0 50%;
+        }
+
+    }
+    
+    &--md33 {
+
+        @include medium {
+            flex: 0 0 33.333333%;
+        }
+
+    }
+
+    &--md25 {
+
+        @include medium {
+            flex: 0 0 25%;
+        }
+
+    }
+
+
+    &--lg50 {
+
+        @include large {
+            flex: 0 0 50%;
+        }
+
+    }
+
+    &--lg33 {
+
+        @include large {
+            flex: 0 0 33.333333%;
+        }
+
+    }
+
+    &--lg25 {
+
+        @include large {
+            flex: 0 0 25%;
+        }
+
+    }
+
+}
