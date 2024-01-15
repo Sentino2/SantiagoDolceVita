@@ -17,15 +17,15 @@
 }
 
 // tylko TEST!!!
-h1 {
-    color:red;
-    font-size: 4rem;
-    @include medium {
-        color: yellow;
-        font-size: 6rem;
-    }
-    @include large {
-        color: blue;
-        font-size: 8rem;
-    }
-}
+// h1 {
+//     color:red;
+//     font-size: 4rem;
+//     @include medium {
+//         color: yellow;
+//         font-size: 6rem;
+//     }
+//     @include large {
+//         color: blue;
+//         font-size: 8rem;
+//     }
+// }
