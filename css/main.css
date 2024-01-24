@@ -1,18 +1,319 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 6 | @forward 'site-footer';
- *   | ^^^^^^^^^^^^^^^^^^^^^^
- *   '
- *   scss\06-components\_index.scss 6:1  @use
- *   scss\main.scss 6:1                  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 6 \2502  @forward 'site-footer';\d\a   \2502  ^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   scss\\06-components\\_index.scss 6:1  @use\a   scss\\main.scss 6:1                  root stylesheet";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Italianno", cursive;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 740px;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .container {
+    max-width: 1120px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 15px;
+}
+@media screen and (min-width: 768px) {
+  .row {
+    flex-direction: row;
+  }
+}
+
+.col {
+  width: 100%;
+  padding: 0 15px 15px 15px;
+}
+@media screen and (min-width: 768px) {
+  .col--md50 {
+    flex: 0 0 50%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .col--md33 {
+    flex: 0 0 33.333333%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .col--md25 {
+    flex: 0 0 25%;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .col--lg50 {
+    flex: 0 0 50%;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .col--lg33 {
+    flex: 0 0 33.333333%;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .col--lg25 {
+    flex: 0 0 25%;
+  }
+}
+
+.blackout {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.nav__item {
+  font-size: 3.2rem;
+}
+@media screen and (min-width: 768px) {
+  .nav__item {
+    display: inline-block;
+    width: 23%;
+  }
+}
+.nav__link {
+  color: #eff0f3;
+  padding: 10px;
+  border-radius: 0.4rem;
+  display: block;
+  text-align: center;
+  transition: 0.5s;
+}
+.nav__link:hover {
+  background-color: #74030e;
+}
+
+.heading {
+  text-align: center;
+  width: 100%;
+}
+.heading--h1 {
+  color: #eff0f3;
+  font-size: 6rem;
+}
+@media screen and (min-width: 768px) {
+  .heading--h1 {
+    font-size: 8rem;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .heading--h1 {
+    font-size: 10rem;
+  }
+}
+.heading--h2 {
+  font-size: 5rem;
+}
+
+.btn {
+  color: #eff0f3;
+  border: none;
+  border-radius: 0.4rem;
+  display: inline-block;
+  font-size: 2.2rem;
+  font-weight: bold;
+  padding: 1.5rem;
+  text-align: center;
+  width: 20rem;
+  transition: 0.5s;
+}
+.btn--red {
+  background-color: #74030e;
+}
+.btn--red:hover {
+  background-color: #5d030c;
+}
+.btn--green {
+  background-color: #132601;
+}
+.btn--green:hover {
+  background-color: #0f1e01;
+}
+.btn--outline {
+  background-color: transparent;
+  border: 1px solid #eff0f3;
+  font-family: inherit;
+}
+.btn--outline:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.btn--circle {
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  line-height: 10rem;
+  padding: 0;
+}
+
+.image-box {
+  border-radius: 0.6rem;
+  box-shadow: 0 0 15px gray;
+}
+.image-box:hover {
+  border-radius: 0.6rem;
+  box-shadow: 0 0 25px gray;
+  cursor: pointer;
+}
+.image-box__image {
+  background: url("../assets/img/one.jpg") center/cover;
+  height: 22rem;
+  display: block;
+  border-top-left-radius: 0.6rem;
+  border-top-right-radius: 0.6rem;
+}
+@media screen and (min-width: 768px) {
+  .image-box__image {
+    height: 16rem;
+  }
+}
+.image-box__image--next {
+  background: url(../assets/img/two.jpeg) center/cover;
+}
+.image-box__text {
+  text-align: center;
+  margin-top: 0;
+}
+
+.site-header {
+  background: url("../assets/img/start.jpeg") center/cover fixed;
+  height: 100vh;
+  position: relative;
+}
+.site-header__blackout {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.site-header__nav {
+  position: absolute;
+  width: 60%;
+  text-align: center;
+  margin-top: 30px;
+}
+.site-header__h1 {
+  position: absolute;
+  bottom: 40%;
+}
+.site-header__button {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: 15%;
+}
+
+.site-section {
+  min-height: 70vh;
+  padding-top: 3rem;
+}
+.site-section--bg-color {
+  background-color: #504533;
+}
+
+.site-footer {
+  background-color: #201b13;
+  height: 40vh;
+  color: #eff0f3;
+}
+
+.text-color-white {
+  color: #eff0f3;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.text-align-justify {
+  text-align: justify;
+}
+
+/*# sourceMappingURL=main.css.map */
