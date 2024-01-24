@@ -1,0 +1,33 @@
+@use '../02-tools/' as *;
+
+.image-box {
+    border-radius: .6rem;
+    box-shadow: 0 0 15px gray;
+
+    &:hover {
+        border-radius: .6rem;
+        box-shadow: 0 0 25px gray;
+        cursor: pointer;
+
+    }
+
+    &__image {
+        background: url('../assets/img/one.jpg') center/cover;
+        height: 22rem;
+        @include medium {
+            height: 16rem;
+        }
+        display: block;
+        border-top-left-radius: .6rem;
+        border-top-right-radius: .6rem;
+
+        &--next {
+            background: url(../assets/img/two.jpeg) center/cover;
+        }
+    }
+
+    &__text {
+        text-align: center;
+        margin-top: 0;
+    }
+}
