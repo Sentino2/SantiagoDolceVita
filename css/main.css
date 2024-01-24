@@ -141,4 +141,44 @@ p {
   }
 }
 
+.btn {
+  color: #eff0f3;
+  border: none;
+  border-radius: 0.4rem;
+  display: inline-block;
+  font-size: 2.2rem;
+  font-weight: bold;
+  padding: 1.5rem;
+  text-align: center;
+  width: 20rem;
+  transition: 0.5s;
+}
+.btn--red {
+  background-color: #74030e;
+}
+.btn--red:hover {
+  background-color: #5d030c;
+}
+.btn--green {
+  background-color: #132601;
+}
+.btn--green:hover {
+  background-color: #0f1e01;
+}
+.btn--outline {
+  background-color: transparent;
+  border: 1px solid #eff0f3;
+  font-family: inherit;
+}
+.btn--outline:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.btn--circle {
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  line-height: 10rem;
+  padding: 0;
+}
+
 /*# sourceMappingURL=main.css.map */
