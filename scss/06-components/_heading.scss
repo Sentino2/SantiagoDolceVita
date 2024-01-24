@@ -1,0 +1,26 @@
+@use '../01-settings/' as *;
+@use '../02-tools/' as *;
+
+.heading {
+    text-align: center;
+    width: 100%;
+    // font-weight: bold;
+
+    &--h1 {
+        color: $color-white;
+        font-size: 6rem;
+        @include medium {
+            font-size: 8rem;
+        }
+        @include large {
+            font-size: 10rem;
+        }
+
+    }
+
+    &--h2 {
+
+        font-size: 5rem;
+
+    }
+}

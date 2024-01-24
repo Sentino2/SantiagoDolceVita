@@ -3,9 +3,14 @@
 
 .site-header {
 
-    background: url('../../assets/img/start.jpeg') center/cover fixed;
+    background: url('../assets/img/start.jpeg') center/cover fixed;
     height: 100vh;
     position: relative;
+
+    &__h1 {
+        position: absolute;
+        bottom: 40%;
+    }
 
     &__button {
         position: absolute;
