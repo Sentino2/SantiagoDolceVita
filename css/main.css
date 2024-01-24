@@ -256,4 +256,12 @@ p {
   bottom: 15%;
 }
 
+.site-section {
+  min-height: 70vh;
+  padding-top: 3rem;
+}
+.site-section--bg-color {
+  background-color: #504533;
+}
+
 /*# sourceMappingURL=main.css.map */
