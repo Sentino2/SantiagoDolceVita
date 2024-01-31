@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/main.css">
     <title>Restauracja Dolce Vita Kraków</title>
 </head>
-<body>
+<body class="site-body">
     <header class="site-header">
         <div class="site-header__blackout blackout"></div>
         <nav>
@@ -24,6 +24,12 @@
         <h1 class="site-header__h1 heading heading--h1">Restauracja Dolce Vita</h1>
         <a class="site-header__button btn btn--red btn--circle"  href="#menu">Menu</a>
     </header>
+    <div class="site-body__social social">
+        <div class="social__item social__item--X"></div>
+        <div class="social__item social__item--YouTube"></div>
+        <div class="social__item social__item--Instagram"></div>
+        <div class="social__item social__item--Facebook"></div>
+    </div>
     <main>
         <section class="site-section" id="start">
             <h2 class="heading heading--h2">Start</h2>
@@ -74,19 +80,20 @@
                 </div>
             </div>
         </section>
-        <section class="site-section" id="kontakt">
-            <h2 class="heading heading--h2">Kontakt</h2>
+        <section class="site-contact" id="kontakt">
+            <div class=" site-contact__blackout blackout"></div>
+            <h2 class="heading heading--h2 site-contact__h2">Kontakt</h2>
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <form>
-                            <label for="email">Podaj Twój e-mail</label><br>
-                            <input id= "email"><br>
-                            <label for="subject">Temat wiadomosci</label><br>
-                            <input id= "subject"><br>
-                            <label for="message">Tresc wiadomosci</label><br>
-                            <textarea id="subject" cols="15" rows="5"></textarea><br>
-                            <button type="submit" >Wyslij</button>
+                        <form class="form site-contact__form">
+                            <label class="form__label" for="email">Podaj Twój e-mail</label>
+                            <input class="form__item" id= "email" type="email"> 
+                            <label class="form__label" for="subject">Temat wiadomosci</label>
+                            <input class="form__item" id= "subject">
+                            <label class="form__label" for="message">Tresc wiadomosci</label>
+                            <textarea class="form__item" id="message" cols="15" rows="5"></textarea>
+                            <button class="btn btn--outline" type="submit" >Wyslij</button>
                         </form>
                     </div>
                 </div>
